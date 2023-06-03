@@ -35,5 +35,14 @@ pipeline {
                 }
             }
         }
+    
+post {
+       failure {
+           emailext body: 'mail from jenkins on successful failure of the task', subject: '', to: 'edujl2003@gmail.com'
+        }
     }
 }
+
+    
+   
+   
